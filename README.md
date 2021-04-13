@@ -16,4 +16,5 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
         - press `s` to save the label in `./label/`
         - press `esc` to quit
 
-![](https://i.imgur.com/1zujBzM.jpg =200x)
+<img width="200" alt="label_example" src="https://user-images.githubusercontent.com/48711966/114554847-b8d79e80-9c99-11eb-943b-2af5bcdab5d3.png">
+
