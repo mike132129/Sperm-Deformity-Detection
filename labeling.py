@@ -25,7 +25,8 @@ display_surface = pygame.display.set_mode((X, Y))
 pygame.display.set_caption('Image')
   
 # create a surface object, image is drawn on it.
-image = glob.glob('./image/*')
+file_path = os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0])))
+image = glob.glob(file_path + '/image/*')
 crash = False
 
 t = 0
@@ -74,10 +75,11 @@ while not crash:
                 pygame.display.update()
 
             elif event.key == pygame.K_s:
-                print('label save', category, left/X, top/X, (right-left)/X, (bottom-top)/X)
-                file_name = image[t].split('/')[-1].split('.')[0]
-                f = open('./label/' + file_name + '.txt', 'a')
-                f.write(str(category) + ' ' + str(left/X) + ' ' + str(top/X) + ' ' + str((right-left)/X) + ' ' + str((bottom-top)/X) + '\n')
+                print('label save', category, left/X, top/X, abs(right-left)/X, abs(bottom-top)/X)
+                file_name = image[t].split('\\')[-1].split('.')[0]
+                f = open(file_path + '/label/' + file_name + '.txt', 'a')
+                f.write(str(category) + ' ' + str((right+left)/X/2) + ' ' + str((top+bottom)/X/2) + ' '\
+                                      + str(abs(right-left)/X) + ' ' + str(abs(bottom-top)/X) + '\n')
                 f.close()
                 pygame.display.update() 
 
