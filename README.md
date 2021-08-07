@@ -16,6 +16,10 @@ https://github.com/eriklindernoren/PyTorch-YOLOv3
      - press `s` to save the label in `./label/`
      - press `esc` to quit
 
+- `pyinstaller labeling.py`
+     - make the file executable
+     - need to put `image` and `label` folder in `dist/`
+
 <img width="200" alt="label_example" src="https://user-images.githubusercontent.com/48711966/114554847-b8d79e80-9c99-11eb-943b-2af5bcdab5d3.png">
 
 ## Training
